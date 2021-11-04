@@ -1,11 +1,11 @@
 ================================================================================
-Algorytmy i Struktury Danych I       Zestaw 01       Autor: Vladyslav Slovinskyi
+Algorytmy i Struktury Danych I                       Autor: Vladyslav Slovinskyi
 ================================================================================
 
 * Zawartosc:
 ============
 
-Katalog Zestaw01 zawiera implementacje ADT Stack w dwoch wersjach:
+Katalog Stack zawiera implementacje ADT Stack w dwoch wersjach:
  * tablicowej;
  * wskaznikowej;
 --------------------------------------------------------------------------------
