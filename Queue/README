@@ -1,11 +1,11 @@
 ================================================================================
-Algorytmy i Struktury Danych I       Zestaw 02       Autor: Vladyslav Slovinskyi
+Algorytmy i Struktury Danych I                       Autor: Vladyslav Slovinskyi
 ================================================================================
 
 * Zawartosc:
 ============
 
-Katalog Zestaw02 zawiera implementacje ADT Queue w dwoch wersjach:
+Katalog Queue zawiera implementacje ADT Queue w dwoch wersjach:
  * tablicowej;
  * wskaznikowej;
 --------------------------------------------------------------------------------
