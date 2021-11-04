@@ -1,0 +1,70 @@
+================================================================================
+Algorytmy i Struktury Danych I       Zestaw 01       Autor: Vladyslav Slovinskyi
+================================================================================
+
+* Zawartosc:
+============
+
+Katalog Zestaw01 zawiera implementacje ADT Stack w dwoch wersjach:
+ * tablicowej;
+ * wskaznikowej;
+--------------------------------------------------------------------------------
+
+I. Zestaw01:
+       1) ArrayStack.*             - tablicowa implementacja stosu;
+       2) LinkedStack.*            - wskaznikowa implementacja stosu;
+       3) Stack.cpp                - program, ktory wczytuje ze
+                                     standardowego wejscia dane generowane
+                                     przez program Generator.x;
+       4) Generator.cpp            - generator danych wejsciowych dla 
+                                     programu Stack.x;
+       5) ONP.cpp                  - program, ktory za pomoca stosu 
+                                     zamienia wyrazenia arytmetyczne w 
+                                     notacji infiksowej na odwrotna
+                                     notacje polska (ONP);
+                                     
+II. Format danych wejsciowych:
+    * A x - poloz na stos liczbe 0 <= x <= 1e+6;
+    * D   - zdejmij element ze stosu i go wypisz, jesli jest pusty wypisz
+            "EMPTY";
+    * S   - wypisz liczbe elementow na stosie;
+--------------------------------------------------------------------------------
+
+* Jak uruchomic programy:
+=========================
+
+Katalog zawiera program Makefile do kompilacji powyzszych programow,
+a takze czyszczenia katalogu.
+
+-> Aby skompilowac projekt nalezy wykonac:
+       $ make
+       
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       $ make clean
+a pair of dangling earrings
+
+
+* Pytania:
+==========
+ * Omów przykłady zastosowania stosu?
+   ** Cofanie zmian w edytorach. Edytory tekstu, grafiki etc. pozwalają
+      zazwyczaj na cofanie wprowadzanych zmian (ctrl + z). Mechanizm ten polega
+      na notowaniu każdej dokonanej przez użytkownika zmiany względem 
+      oryginalnego (np. pustego) dokumentu. Każda zanotowana w ten sposób zmiana 
+      zostaje położona na stos. Cofnięcie zmiany polega na ściągnięciu
+      informacji o zmianie ze stosu;
+   ** Wstecz/dalej w przeglądarkach internetowych. Przeglądarka przechowuje na  
+      stosie adresy odwiedzanych stron;
+   ** Konwersja wyrazen w notacji infiksowej na odwrotna notacje polska (ONP);
+   ** Problem weryfikacji nawiasowania w IDE;
+      
+ * Dlaczego operacja pop() z std::stack nie zwraca wartości elementu?
+   ** Poniewaz zwracamy array[--top] przez wartosc, to moze nastopic kopiowanie
+      elementu typu T. Nie musi, poniewaz kompilator ma prawo zoptymalizowac
+      powstaly obiekt tymczasowy. Jezeli jednak zostanie wywolany konstruktor
+      kopiujacy, to moze rzucic wyjatek. Wtedy stos pozostanie w zmienionym
+      stanie, bo wartosc top zostanie zmniejszona.
+      
+ * Dlaczego operacja pop() z std::stack nie zwraca referencji do elementu?
+   ** Zwracanie referencji spowoduje utworzenie wiszacego wskaznika;
+================================================================================
