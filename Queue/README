@@ -1,0 +1,63 @@
+================================================================================
+Algorytmy i Struktury Danych I       Zestaw 02       Autor: Vladyslav Slovinskyi
+================================================================================
+
+* Zawartosc:
+============
+
+Katalog Zestaw02 zawiera implementacje ADT Queue w dwoch wersjach:
+ * tablicowej;
+ * wskaznikowej;
+--------------------------------------------------------------------------------
+
+I. Zestaw01:
+       1) ArrayQueue.*             - tablicowa implementacja kolejki;
+       2) LinkedQueue.*            - wskaznikowa implementacja kolejki;
+       3) Queue.cpp                - program, ktory wczytuje ze
+                                     standardowego wejscia dane generowane
+                                     przez program Generator.x;
+       4) Generator.cpp            - generator danych wejsciowych dla 
+                                     programu Queue.x;
+       5) Radix.cpp                - implementacja algorytmu sortowania
+                                     pozycyjnego przy uzyciu kolejek;
+
+II. Format danych wejsciowych:                                     
+    * A x - wstaw do kolejki liczbe 0 <= x <= 1e+6;
+    * D   - pobierz element z kolejki i go wypisz, jesli jest pusta wypisz
+            "EMPTY";
+    * S   - wypisz liczbe elementow w kolejce;
+--------------------------------------------------------------------------------
+
+* Jak uruchomic programy:
+=========================
+
+Katalog zawiera program Makefile do kompilacji powyzszych programow,
+a takze czyszczenia katalogu.
+
+-> Aby skompilowac projekt nalezy wykonac:
+       $ make
+       
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       $ make clean
+
+
+
+* Pytania:
+==========
+ * Opisz trzy sposoby obsługi cykliczności bufora.
+   ** Tablica + dwa indeksy (indeks odczytu i zapisu) (wada: marnujemy jeden 
+      element tablicy);
+   ** Tablica + indeks + długość (zwiekszamy indeks odczytu, zmniejszamy 
+      dlugosc);
+   ** Tablica + dwa niemaskowane indeksy;
+      
+ * Omów przykłady zastosowania kolejki?
+   ** Przydatna struktura danych do implementacji algorytmu sortowania
+      pozycyjnego;
+   ** Róźnego typu systemy rezerwacji;
+   ** System do zarzadzania kolejnoscia drukowania stron w drukarce;
+      
+ * Co oznaczają akronimy LIFO i FIFO?
+   ** LIFO -- Last In, First Out;
+   ** FIFO -- First In, irst Out;
+================================================================================
